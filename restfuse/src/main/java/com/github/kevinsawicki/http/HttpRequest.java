@@ -1596,7 +1596,7 @@ public class HttpRequest {
    * @throws HttpRequestException
    */
   public String body() throws HttpRequestException {
-    return body(charset());
+    return isBodyEmpty() ? "" : body(charset());
   }
 
   /**
